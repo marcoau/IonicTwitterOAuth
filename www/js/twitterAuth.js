@@ -40,7 +40,7 @@ angular.module('twitterLib', [])
   // This key is used for storing Information related
   // var twitterKey = 'PU47tNh833f96TZ1OlrspA';
 
-  var twitterKey;
+  var twitterKey = 'TWITTERKEY';
 
   // used to check if we are running in phonegap/cordova
   $window.document.addEventListener("deviceready", function () {
@@ -156,7 +156,7 @@ angular.module('twitterLib', [])
       //@param _args
       var failureHandler = function (_args) {
         console.log("ERROR - oauth_verifier: " + JSON.stringify(_args));
-        _deferred.reject({error: 'user_cancelled', error_description: _args });
+        _deferred.reject({error: 'user_cancelled', error_description: _args })
       };
 
       console.log("callbackURL " + callbackURL);
